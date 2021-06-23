@@ -1,0 +1,13 @@
+@use './partials/variables' as variables;
+@use './partials/mixins' as mixins;
+@use './partials/fonts' as fonts;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}

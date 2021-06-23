@@ -1,0 +1,57 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/fonts' as *;
+
+
+.col-md-6 {
+    width: 15rem;
+    height: 10rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: $white;
+    margin: 1rem;
+    font-family: 'Benne';
+
+    &:hover {
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
+    color: $white;
+    }
+}
+
+.league-leaders {
+    background-color: $light-yellow;
+
+    @include tablet {
+        padding: 0 5rem;
+    }
+
+    @include desktop {
+        padding: 0 6rem;
+    }
+
+    @include large-desktop {
+        padding: 0 20rem;
+    }
+
+    &__data-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    &__header {
+        font-family: 'Benne';
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
