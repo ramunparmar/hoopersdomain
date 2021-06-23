@@ -1,4 +1,5 @@
 import React from 'react';
+import './TeamsPage.scss';
 import Loader from 'react-loader-spinner';
 import { Link } from 'react-router-dom';
 const axios = require('axios');
@@ -94,27 +95,27 @@ class Team extends React.Component {
         }
         if (!(Object.keys(this.state.stats).length === 0) && typeof(this.state.stats) === "object") {
             return (
-                <div className="player justify-content-center">
-                    <div className="text-light team-overlay">
-                        <div className="container center pb-4">
-                            <div className="row">
-                                <div className="col-sm-12 col-md-4">
+                <div className="teams-table">
+                    <div className="teams-table__container">
+                        <div className="teams-table__data-container">
+                            <div className="teams-table__row">
+                                <div className="teams-table__image container">
                                     <img src={ this.state.logo } alt={`${this.state.standings.name}`}></img>
                                 </div>
-                                <div className="col-sm-12 col-md-8">
-                                    <h1 className="display-1">
+                                <div className="teams-table__header-container">
+                                    <h1 className="teams-table__header">
                                         {`${this.state.standings.name}`}
                                     </h1>
                                 </div>
                             </div>
-                            <div className="row">
+                            <div className="row3">
                                 <div className="col-sm-12 col-md-3">
                                     <div>2020-21 Season </div>
                                     <div>{this.state.standings.W}-{this.state.standings.L} ({this.state.standings.PCT})</div>
                                     <div> {getRank(this.state.standings.rank)} in {this.state.standings.conference}</div>
                                 </div>
                                 <div className="col-sm-12 col-md-8">
-                                    <div className="row">
+                                    <div className="row3">
                                         <div className="col col-md-3 text-center">
                                             <h2>PPG</h2>
                                             <h3>{getRank(this.state.stats.ppg)}</h3>

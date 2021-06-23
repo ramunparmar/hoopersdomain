@@ -1,0 +1,23 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/fonts' as *;
+
+.teams-table {
+    background-color: $light-yellow;
+
+    &__data-container {
+        font-family: 'Benne';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__header-container {
+        padding: 1rem;
+    }
+}
+
+.col-md-3 {
+    padding: 1rem;
+}

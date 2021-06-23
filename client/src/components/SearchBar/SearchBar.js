@@ -62,6 +62,7 @@ class SearchBar extends React.Component {
     }
 
     handleSubmit() {
+        console.log("search submitted");
         this.setState({
             activeOption: 0,
             filteredOptions: [],
@@ -120,7 +121,7 @@ class SearchBar extends React.Component {
                         variant="dark"
                         size="sm"
                         onClick={this.handleSubmit}
-                        className="search-button">
+                        className="search-button"> Search Player
                         <i className="fa fa-search" aria-hidden="true"></i>
                     </Button>
                     {optionList}

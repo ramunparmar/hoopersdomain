@@ -2,6 +2,7 @@ import React from 'react';
 // import Loader from 'react-loader-spinner';
 // import ShotChart from '../ShotChart/ShotChart';
 import axios from 'axios';
+import './PlayerTable.scss'
 
 
 
@@ -87,9 +88,9 @@ state = {
         }
         let playerInfo = (
             <div>
-                <div className="row">
-                    <div className="col-lg-4 my-auto">
-                        <img width="10%" src={ this.state.playerPhoto } alt={this.state.playerInfo.firstName + " " +  this.state.playerInfo.lastName}></img>
+                <div className="player-info-table">
+                    <div className="player-info-table__image-container">
+                        <img width="30%" src={ this.state.playerPhoto } alt={this.state.playerInfo.firstName + " " +  this.state.playerInfo.lastName}></img>
                     </div>
                     <div className="col-8">
                         <h1 className='display-3'>
@@ -100,7 +101,7 @@ state = {
                             {this.state.playerInfo.team}
                             <small className="text-muted"> - {this.state.playerInfo.number}</small>
                         </h3>
-                        <div className="row">
+                        <div className="player-info-table__current-season-stats">
                             <div className="col-3">
                                 <div>Height: {this.state.playerInfo.height}</div>
                                 <div>Weight: {this.state.playerInfo.weight}</div>
@@ -121,7 +122,7 @@ state = {
                         </div>
                     </div>
                 </div>  
-                <div className="container-fluid">
+                <div className="player-info-table__container">
                     <h2>Per Game Stats</h2>
                     <div className="table-responsive">
                         <table className="table table-striped table-dark table-hover" style={{fontSize: 14}}>

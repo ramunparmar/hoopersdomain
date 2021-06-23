@@ -5,15 +5,17 @@
 .home {
     background: linear-gradient(315deg, $dark-teal, $teal, $orange, $maroon);
 
+
     &__header {
         font-family: 'Benne';
         font-size: 5rem;
         color: $white;
+        padding: 1rem;
     }
 }
 
 .teams {
-
+    background-color: $teal;
 
     &__header {
         font-family: 'Benne';

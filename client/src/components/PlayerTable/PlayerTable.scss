@@ -1,0 +1,54 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/fonts' as *;
+
+.player-info-table {
+    padding: 1rem;
+    font-family: 'Benne';
+    background-color: $light-yellow;
+
+
+    &__container {
+        background-color: $orange;
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+}
+
+.col-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-3 {
+    padding: 1rem;
+}
+
+.table-responsive {
+    background-color: $light-yellow;
+    font-family: 'Roboto';
+}
+
+h2 {
+    font-family: 'Benne';
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+th {
+    padding: 1rem 0;
+}
+
+td {
+    padding: .25rem;
+}
+
+tr {
+    border-top: solid 1px $slate;
+    border-bottom: solid 1px $slate;
+}

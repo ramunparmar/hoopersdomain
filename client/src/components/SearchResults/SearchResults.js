@@ -20,13 +20,19 @@ class SearchResults extends React.Component {
     }
 
     getInfo(ID) {
+        console.log("ID", ID);
         if (playerList.includes(ID)) {
             this.setState({isPlayer: true, id: ID});
         } else {
-
-            const filteredOptions = playerList.filter(
-                (player) => player.toLowerCase().indexOf(ID.toLowerCase()) > -1
-            );
+            console.log(playerList);
+            const filteredOptions = playerList.map(
+                (player) => { const playerStr = player.toLowerCase()
+                    console.log(playerStr);
+                    return playerStr;
+                    // return player.toLowerCase().indexOf(ID.toLowerCase()) > -1;
+            }).filter((player) => {
+                return player
+            })
             this.setState({playerOptions: filteredOptions, id: ID});
         }
     }

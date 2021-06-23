@@ -80,10 +80,6 @@ handleChange = (event) => {
      <p className="player-info__season-information">Free Throw Percentage (decimal): {this.state.playerStats["ft_pct"]}</p>
      <p className="player-info__season-information">3 Point Percentage (decimal): {this.state.playerStats["fg3_pct"]}</p>
      <p className="player-info__season-information">Turnovers Averaged: {this.state.playerStats["turnover"]}</p>
-
-     <div className="player-info__players-list">
-         this.state.
-     </div>
     </div>
     
 
