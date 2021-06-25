@@ -79,7 +79,7 @@ class Team extends React.Component {
                 <tr key={this.state.roster[i].name}>
                     <td>
                         <Link 
-                            to={`/player/${this.state.roster[i].name}`} 
+                            to={`/players/${this.state.roster[i].name}`} 
                             style={{textDecoration: "none", color: "black"}}
                             >{this.state.roster[i].name}
                         </Link>

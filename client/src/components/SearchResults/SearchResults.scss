@@ -1,0 +1,16 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/fonts' as *;
+
+
+.search-results {
+    background-color: $light-yellow;
+    height: 100%;
+    padding: 1rem;
+
+
+    &__header {
+        font-family: 'Benne';
+        font-size: 1.75rem;
+    }
+}
