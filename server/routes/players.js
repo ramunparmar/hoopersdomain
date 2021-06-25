@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const axios = require('axios');
 const cheerio = require('cheerio');
-const playerKey = require('../utils/playerKey')
 
 // router.get("/", (req, res) => {
 //     axios.get(`https://www.balldontlie.io/api/v1/players?per_page=100`).then((resTwo) => {
@@ -13,15 +12,17 @@ const playerKey = require('../utils/playerKey')
 // })
 
 
+// router.get("/:playerID/basics", (req, res) => {
+//     getMinimalPlayerInfo(playerKey[req.params.playerID], res);
+// });
+
 router.get("/:playerID", (req, res) => {
     console.log(req.params.playerID);
     getPlayer(req.params.playerID, res);
 
 });
 
-router.get("/:playerID/basics", (req, res) => {
-    getMinimalPlayerInfo(playerKey[req.params.playerID], res);
-});
+
 
 // get player basic info (cur stats, weight, height, etc)
 function getPlayerBasics(html) {
@@ -46,7 +47,7 @@ function getPlayerBasics(html) {
         per: $curSeasonStats[3].children[0].data,
     }
 
-    console.log(basics);
+    // console.log(basics);
 
     return basics;
 }
@@ -119,26 +120,5 @@ function getPlayer(ID, res) {
     });
 }
 
-function getMinimalPlayerInfo(ID, res){
-    axios.get(`https://www.espn.com/nba/player/stats/_/id/${ID}`)
-    .then((response) => {
-        res.send({
-            basics: getPlayerBasics(response.data),
-            photo: getPlayerPhoto(ID)
-        })
-    })
-    .catch((error) => {
-        if(error.response) {
-            console.log(error.response);
-            res.send({errors: error.response});
-        } else if (error.request) {
-            console.log(error.request);
-            res.send({errors: error.request});
-        } else {
-            console.log(error);
-            res.send({errors: error});
-        }
-    });
-}
 
 module.exports = router;

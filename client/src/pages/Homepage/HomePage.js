@@ -4,7 +4,8 @@ import * as NBAIcons from 'react-nba-logos';
 import CurrentStatLeaders from '../../components/CurrentStatLeaders/CurrentStatLeaders';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { Link } from 'react-router-dom';
-const playerList = require('../../utils/playerList');
+import playerKey from '../../utils/playerKey';
+import AwardWinners from '../../components/AwardWinners/AwardWinners';
 
 export default class HomePage extends Component {
 
@@ -110,7 +111,17 @@ export default class HomePage extends Component {
                     </Link>
                 </div>
             </section>
-            <SearchBar options={playerList}/>
+
+            <section className="awards">
+                <AwardWinners />
+            </section>
+
+
+
+            <section className="search">
+                <h1 className="search__header">Search Your Favourite Player!</h1>
+            <SearchBar options={playerKey}/>
+            </section>
             </>
         )
     }
