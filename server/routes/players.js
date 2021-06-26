@@ -3,19 +3,6 @@ const router = express.Router();
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-// router.get("/", (req, res) => {
-//     axios.get(`https://www.balldontlie.io/api/v1/players?per_page=100`).then((resTwo) => {
-//         res.send(resTwo.data)
-//     }).catch((error) => {
-//         console.log(error);
-//     })
-// })
-
-
-// router.get("/:playerID/basics", (req, res) => {
-//     getMinimalPlayerInfo(playerKey[req.params.playerID], res);
-// });
-
 router.get("/:playerID", (req, res) => {
     console.log(req.params.playerID);
     getPlayer(req.params.playerID, res);
@@ -47,7 +34,6 @@ function getPlayerBasics(html) {
         per: $curSeasonStats[3].children[0].data,
     }
 
-    // console.log(basics);
 
     return basics;
 }

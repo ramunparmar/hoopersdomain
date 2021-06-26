@@ -1,0 +1,14 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins' as *;
+@use '../../partials/fonts' as *;
+
+
+.header {
+background: linear-gradient(275deg, $dark-teal, $teal, $orange, $maroon);
+
+
+    &__logo {
+        height: 10rem;
+        width: 20rem;
+    }
+}

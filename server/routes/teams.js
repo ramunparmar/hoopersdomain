@@ -91,7 +91,6 @@ function getRoster(html){
             school: player.children[6].children[0].children[0].data
         })
     });
-    // console.log(players);
     return players;
 }
 

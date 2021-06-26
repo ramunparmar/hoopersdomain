@@ -5,11 +5,13 @@ import HomePage from './pages/Homepage/HomePage';
 import PlayersPage from './pages/PlayersPage/PlayersPage';
 import TeamsPage from './pages/TeamsPage/TeamsPage';
 import SearchResults from './components/SearchResults/SearchResults';
+import Header from './components/Header/Header';
 
 
 function App() {
   return (
     <BrowserRouter>
+    <Header />
     <Switch>
       <Route path='/' exact component={HomePage} />
       <Route path='/players/:playerID' component={PlayersPage} />
